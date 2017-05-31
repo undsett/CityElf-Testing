@@ -17,14 +17,13 @@ def update_user(id, key, value):
     response_1[key] = value
     response = requests.put(URL + "updateUser/"
                             ,json=(response_1))
-    #print(response_1)
+    print(response)
     return response
 
 #---------------TEST_RESONSE--------------------------------
 class TestResponse(unittest.TestCase):
     def test_response(self):
         str_r = str(r)
-        print(str_r)
         self.assertTrue(str_r == '<Response [200]>')
 #---------------MAIN BODY------------------------------------
 if __name__ == '__main__':
