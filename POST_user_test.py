@@ -24,5 +24,5 @@ def post_user(id,firstname,lastname,address,email,phone,sms,email_not,push,recen
     response = requests.post(URL + 'addUser' , json=(user))
     print(response)
     return response
-#-------------------------------------------------------------
+#--------------------------------------------------------------
 

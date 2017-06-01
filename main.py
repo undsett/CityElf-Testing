@@ -33,7 +33,7 @@ class TestIsReturnUserById(unittest.TestCase):
         self.assertEqual(GET_user_by_id_test.get_user_by_id(42)['lastname'], 'Rozhko')
     def test_is_correct_email(self):
         self.assertEqual(GET_user_by_id_test.get_user_by_id(42)['email'], 'Rozhkoandrey@gmail.com')
-#---------------------TEST GET all users-----------------------------------
+#---------------------TEST GET all users------------------------------------
 class TestIsReturnUsers(unittest.TestCase):
     def test_is_return_users(self):
         get_users_check = GET_all_users_test.get_users()
