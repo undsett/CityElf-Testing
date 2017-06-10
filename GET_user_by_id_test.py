@@ -7,6 +7,6 @@ def get_user_by_id(id):
     response = requests.get(URL + str(id))
     user = response.json()
     #print(response.content)              #In case of error u can remove '#' and see more delailed description
-    #print(response)
+    print('GET by ID rquest----',response)
     return user
 #-------------------------------------------------------------

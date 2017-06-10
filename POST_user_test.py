@@ -1,4 +1,3 @@
-
 #----------------URL and imports-------------------------
 import requests
 import json
@@ -22,7 +21,5 @@ def post_user(id,firstname,lastname,address,email,phone,sms,email_not,push,recen
     recent_addresse.append(recent_addresses_2)
     json_objct = json.dumps(user)
     response = requests.post(URL + 'addUser' , json=(user))
-    print(response)
+    print('POST request----',response)
     return response
-#--------------------------------------------------------------
-

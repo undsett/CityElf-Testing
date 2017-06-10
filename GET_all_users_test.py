@@ -11,6 +11,7 @@ def get_users():
 def get_users_response():
     response = requests.get(URL+'all')
     users = response.json()
-    #print(response.content)            #In case of error u can remove '#' and see more delailed description
+    #print(response.content)  #           #In case of error u can remove '#' and see more delailed description
+    print('GET ALL Request----',response)
     return response
 #---------------------------------------------------------------------

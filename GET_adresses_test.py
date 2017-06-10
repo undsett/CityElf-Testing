@@ -6,7 +6,7 @@ URL = 'http://localhost:8088/services/users/recentAddresses/'
 def get_adresses_by_id(id):
     response = requests.get(URL + str(id))
     adresses =  response.json()
-    print(response)
+    print('GET ADRESSES----',response)
     #print(response.content)            #In case of error u can remove '#' and see more delailed description
     return adresses
 
