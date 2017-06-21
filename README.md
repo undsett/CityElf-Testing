@@ -1,5 +1,5 @@
 # CityElf-Testing
-perository   for automation tests
+repository for automation tests
 
 
 

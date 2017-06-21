@@ -14,4 +14,12 @@ def get_users_response():
     #print(response.content)  #           #In case of error u can remove '#' and see more delailed description
     print('GET ALL Request----',response)
     return response
+
+def serach_by_email(email):
+    get_all_users = get_users()
+    for dic in get_all_users:
+        for key, value in dic.items():
+            if value == email:
+                id = dic['id']
+                return id
 #---------------------------------------------------------------------
