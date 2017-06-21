@@ -7,7 +7,7 @@ def delete_user_by_id(id):
     response = requests.delete(URL + str(id))
     print('DELETE request----',response)
     return response
-#-------------------------------------------------------------
+#--------------------------------------------------------------
 def get_user_by_id(id):
     response = requests.get(URL + str(id))
     user = response.json()

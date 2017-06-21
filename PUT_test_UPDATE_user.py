@@ -5,7 +5,7 @@ import requests
 import GET_user_by_id_test
 
 URL = 'http://localhost:8088/services/users/'
-#---------------REQUESTS-----------------------------------
+#---------------REQUESTS------------------------------------
 def update_user(id, key, value):
     response_1 = GET_user_by_id_test.get_user_by_id(id)
     #d  = {key : value}
@@ -14,5 +14,5 @@ def update_user(id, key, value):
                             ,json=(response_1))
     print('PUT REQUEST----',response)
     return response
-#------------------------------------------------------------
+#-------------------------------------------------------------
 

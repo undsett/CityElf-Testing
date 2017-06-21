@@ -6,7 +6,7 @@ import POST_user_test
 import DELETE_test
 import unittest
 
-# ---------------Test POST module-------------------------------------
+# ---------------Test POST module--------------------------------------
 class TestcorrectPostResponse(unittest.TestCase):
     def test_post_resonse(self):
         str_r = str(post_r)

@@ -1,8 +1,8 @@
-#----------------URL and imports-------------------------
+#----------------URL and imports---------------------------
 import requests
 import json
 URL = 'http://localhost:8088/services/users/'
-#---------------REQUESTS-----------------------------------
+#---------------REQUESTS------------------------------------
 
 def post_user(email,phone,password):
     user = {}
