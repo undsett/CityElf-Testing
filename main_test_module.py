@@ -1,9 +1,9 @@
 # --------------imports requests modules ----------------------------
-import GET_user_by_id_test
-import GET_all_users_test
-import PUT_test_UPDATE_user
-import POST_user_test
-import DELETE_test
+import GET_user_by_id_requests
+import GET_all_users_requests
+import PUT_requests_UPDATE_user
+import POST_user_requests
+import DELETE_request
 import unittest
 
 # ---------------Test POST module--------------------------------------
@@ -32,7 +32,7 @@ class TestIsReturnUserById(unittest.TestCase):
 # ---------------------TEST GET all users------------------------------------
 class TestIsReturnUsers(unittest.TestCase):
     def test_is_return_users(self):
-        get_users_check = GET_all_users_test.get_users()
+        get_users_check = GET_all_users_requests.get_users()
         for dct in get_users_check:
             for key, value in dct.items():
                 self.assertTrue(key == 'id')
@@ -50,14 +50,14 @@ class TestDeleteResponse(unittest.TestCase):
 
 # --------------------------Main body-------------------------------------
 if __name__ == '__main__':
-    post_r = POST_user_test.post_user("Rozhkoandrey@gmail.com", '0939055320' ,"qazxsw")
-    user_id = GET_all_users_test.serach_by_email('Rozhkoandrey@gmail.com')
-    put_r = (PUT_test_UPDATE_user.update_user(user_id, 'email', 'Rozhkoandrew@gmail.com'))
-    forgot_password = POST_user_test.post_for_forgot_password('Rozhkoandrew@gmail.com')
-    user_by_id = GET_user_by_id_test.get_user_by_id(user_id)
-    all_users_r = (GET_all_users_test.get_users_response())
-    delete_r = DELETE_test.delete_user_by_id(user_id)
-    search_response = (GET_user_by_id_test.get_user_by_id(user_id)['status'])
+    post_r = POST_user_requests.post_user("Rozhkoandrey@gmail.com", '0939055320', "qazxsw")
+    user_id = GET_all_users_requests.serach_by_email('Rozhkoandrey@gmail.com')
+    put_r = (PUT_requests_UPDATE_user.update_user(user_id, 'email', 'Rozhkoandrew@gmail.com'))
+    forgot_password = POST_user_requests.post_for_forgot_password('Rozhkoandrew@gmail.com')
+    user_by_id = GET_user_by_id_requests.get_user_by_id(user_id)
+    all_users_r = (GET_all_users_requests.get_users_response())
+    delete_r = DELETE_request.delete_user_by_id(user_id)
+    search_response = (GET_user_by_id_requests.get_user_by_id(user_id)['status'])
     unittest.main()
 
 
