@@ -18,6 +18,11 @@ class TestCorrectPutResponse(unittest.TestCase):
         str_r = str(put_r)
         self.assertTrue(str_r == '<Response [200]>')
 
+#-----------------------------------------------------------------------
+class TestFOrgorPassword(unittest.TestCase):
+    def test_response(self):
+        str_r = str(forgot_password)
+        self.assertTrue(str_r == '<Response [200]>')
 # ----------------TEST GET by id module----------------------------------
 class TestIsReturnUserById(unittest.TestCase):
     def test_is_correct_id(self):
@@ -48,6 +53,7 @@ if __name__ == '__main__':
     post_r = POST_user_test.post_user("Rozhkoandrey@gmail.com", '0939055320' ,"qazxsw")
     user_id = GET_all_users_test.serach_by_email('Rozhkoandrey@gmail.com')
     put_r = (PUT_test_UPDATE_user.update_user(user_id, 'email', 'Rozhkoandrew@gmail.com'))
+    forgot_password = POST_user_test.post_for_forgot_password('Rozhkoandrew@gmail.com')
     user_by_id = GET_user_by_id_test.get_user_by_id(user_id)
     all_users_r = (GET_all_users_test.get_users_response())
     delete_r = DELETE_test.delete_user_by_id(user_id)
