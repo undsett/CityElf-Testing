@@ -13,5 +13,4 @@ def get_user_by_id(id):
     user = response.json()
     #print(response.content)              #In case of error u can remove '#' and see more delailed description
     return user
-
-
+#--------------------------------------------------------------

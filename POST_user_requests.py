@@ -3,7 +3,6 @@ import requests
 import json
 URL = 'http://localhost:8088/services/'
 #---------------REQUESTS--------------------------------------
-
 def post_user(email,phone,password):
     user = {}
     user['email'] = email
@@ -11,13 +10,13 @@ def post_user(email,phone,password):
     user['address'] = password
     #json_objct = json.dumps(user)
     response = requests.post(URL + 'users/addUser' , json=(user))
-    print('POST request----',response)
+    print('POST USER request----',response)
     return response
 
 def post_for_forgot_password(email):
     response = requests.post(URL + 'forgot/reset?email=' + str(email))
     print('FORGOT password response -----',response)
-    print(response.links)
+    #print(response.links)
     return response
 
 '''def test_post():
