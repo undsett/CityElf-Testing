@@ -17,10 +17,10 @@ class TestResponse(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    start = schedule.every(1).minutes.do(job)
+    start = schedule.every(6).minutes.do(job)
     while 1:
         schedule.run_pending()
-        time.sleep(1)
+        time.sleep(7)
 
 
 
