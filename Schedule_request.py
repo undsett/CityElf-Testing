@@ -21,6 +21,9 @@ def job():
     if  str(response) != '<Response [200]>':
         send_email()
         print("Somethink wrong, email already send")
+        print(response)
+        print(response.content)
+        exit()
     return response
 
 
