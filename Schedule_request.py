@@ -7,7 +7,7 @@ def send_email():
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
 
-    server.login("cityelfparsses@gmail.com", 'qwedsazxccdewsxzaq')
+    server.login("cityelfparsses@gmail.com", 'PASSWORD')
 
     msg = "Somethink wrong with PARSES work. Please check it!"
     server.sendmail("cityelfparsses@gmail", "cityelfodessa@gmail.com", msg)
@@ -21,6 +21,7 @@ def job():
     if  str(response) != '<Response [200]>':
         send_email()
         print("Somethink wrong, email already send")
+        exit()
     return response
 
 
