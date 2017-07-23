@@ -29,7 +29,7 @@ def job():
 
 
 if __name__ == '__main__':
-    start = schedule.every(1).minutes.do(job)
+    start = schedule.every(7).minutes.do(job)
 
     while 1:
         schedule.run_pending()
